@@ -1,7 +1,7 @@
-import math
+import math     #imports
 import tkinter
 
-button_values = [
+button_values = [    #button layout
     ['AC', '⌫', '%', '/'],
     ['7', '8', '9', 'x'],
     ['4', '5', '6', '-'],
@@ -51,7 +51,7 @@ def clear_all():
 def backspace_function():
     current_text = label["text"]
     if current_text != "0" and len(current_text) > 1:
-        label["text"] = current_text[:-1]
+        label["text"] = current_text[:-1] # Remove last character
     elif current_text != "0" and len(current_text) == 1:
         label["text"] = "0"
 
@@ -163,7 +163,7 @@ def button_clicked(value):
                 label["text"] += value
 
 
-# Create buttons AFTER function definitions
+# Create buttons AFTER function definitions  , BUTTON CREATION LOOP
 for row in range(row_count):
     for column in range(column_count):
         value = button_values[row][column]
